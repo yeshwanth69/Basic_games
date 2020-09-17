@@ -6,11 +6,11 @@ def game_man():
     print("Hello, " + name, "It is time to play hangman!")
     print("Start guessing.....!")
     # here we set the secret
-    word = "rexssfqnkxd"
+    word =''.join(random.choice(string.ascii_lowercase) for _ in range(4))
     # creates a variable with an empty value
     guesses = ''
     # determine the number of turns
-    turns = 20
+    turns = 30
     while turns > 0:
         failed = 0
         for char in word:
